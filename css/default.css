@@ -1,0 +1,309 @@
+body {
+	background: url(/postfixadmin/images/linen.jpg) repeat #d1d5d8;
+	color: #333;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	text-align: center;
+}
+
+h6 {
+	font: 13px/1.7em 'Open Sans';
+}
+
+a {
+	text-decoration: none;
+	color: #4f4f4f;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #000;
+}
+
+table {
+	/* border-spacing: 0; */
+	/* padding: 0; */
+	border-collapse: collapse; /* for IE */
+}
+
+.button {
+	border: 1px solid #aaaaaa;
+	color: #777777;
+	background: #dddddd;
+	padding: 3px 3px 3px 3px;
+	font-size: 11px;
+}
+
+
+.flat {
+	border: 1px solid #888888;
+}
+
+ul.flash-info {
+	border:2px solid #AFE1A6; /* medium green */
+	padding:1em;
+	max-width:730px;
+	margin-left:auto;
+	margin-right:auto;
+	list-style:none;
+}
+
+ul.flash-error {
+	border:2px solid #FF6347; /* tomato */
+	padding:1em;
+	max-width:730px;
+	margin-left:auto;
+	margin-right:auto;
+	list-style:none;
+}
+
+.error_msg {
+	color: #d01313;
+}
+
+.standout {
+	color: maroon;
+	padding: 3px 3px 3px 3px;
+	text-align: center;
+}
+
+#login_header {
+	width: 750px;
+	padding: 20px 0 20px 0;
+	margin: 0 auto;
+	text-align: left;
+}
+
+#login {
+	width: 750px;
+	margin: 100px auto auto auto;
+	padding: 30px 0 10px 0;
+}
+
+#login input {
+	max-width: 179px;
+}
+
+.formbox {
+	padding: 25px;
+	border-radius: 5px;
+	border: 1px solid rgba(100, 100, 100, 0.2);
+	background-color: rgba(100, 100, 100, 0.1);
+	width: 300px; 
+	margin: 0 auto;
+	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+  border: 1px solid rgba(100, 100, 100, 0.245);
+}
+
+.loginbox {
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid rgba(100, 100, 100, 0.2);
+	background: url(/postfixadmin/images/linen_login.jpg) no-repeat;
+	background-color: rgba(100, 100, 100, 0.1);
+	width: 300px; 
+	margin: 0 auto;
+	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+  border: 1px solid rgba(100, 100, 100, 0.245);
+}
+
+.well {
+	border: none;
+	background-color: transparent;
+}
+
+.nav li ul {
+	padding: 5px;
+}
+
+.nav li ul li a {
+	font-size: 90%;
+	padding-top: 5px;
+}
+
+.navbar .brand img {
+	margin-top: -5px; 
+	opacity: 0.6;
+}
+
+.navbar .brand img:hover {
+	opacity: 0.7;
+}
+
+#menu {
+	width: 750px;
+	margin: 10px auto 0 auto;
+	font: 1.31em/1 Georgia, 'Times New Roman', Times, serif;
+	color: #444;
+}
+
+#menu ul {
+	list-style: none;
+}
+
+
+#menu li ul {
+	position: absolute;
+	width: auto;
+	left: -999em;
+}
+#menu li:hover ul, #menu li.sfhover ul {
+	margin-left: 0;
+   	left: auto;
+   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+	background-color: whiteSmoke;
+	background-image: -moz-linear-gradient(top, white, #e6e6e6);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#e6e6e6));
+	background-image: -webkit-linear-gradient(top, white, #e6e6e6);
+	background-image: -o-linear-gradient(top, white, #e6e6e6);
+	background-image: linear-gradient(to bottom, white, #e6e6e6);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+	border-color: #e6e6e6 #e6e6e6 silver;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+	border: 1px solid #bbbbbb;
+	border-bottom-color: #a2a2a2;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+
+#menu li ul li {
+    float: none;
+	margin-right: 0px;
+	font: 1.00em/1 Georgia, 'Times New Roman', Times, serif;
+	text-align:left;
+}
+
+
+
+
+#menu a {
+	display: block;
+	width: auto;
+	padding: 10px 5px 0px 5px;
+	color: #333;
+}
+
+#menu a:hover {
+	color: #777;
+}
+
+
+
+#menu li ul li a {
+	padding: 5px 5px 5px 5px;
+}
+
+
+
+
+
+.hlp_center {
+	text-align: center;
+}
+
+.help_text {
+	background: #efefef;
+	border-left: 1px solid #bbbbbb;
+	border-right: 1px solid #bbbbbb;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+#main_menu {
+	width: 750px;
+	margin: 0 auto;
+}
+
+#main_menu table {
+	margin: 0 auto;
+	text-align: left;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+
+legend {
+	border-bottom: 1px solid rgba(100, 100, 100, 0.15);;
+}
+
+
+#overview, #admin_domains, #admin_virtual {
+	width: 750px;
+	margin: 0 auto;
+}
+
+
+#nav_bar {
+	text-align: right;
+	width: 750px;
+	margin: 0 auto;
+}
+
+#alias_domain_table, #alias_table, #mailbox_table, #overview_table, #log_table, #admin_table {
+	width: 750px;
+	margin: 0px auto;
+}
+
+table {
+	background: #f1f1f1;;
+	font-size: 115%;
+}
+
+table .header {
+	font-weight: bold;
+}
+
+#footer {
+	padding-top: 20px;
+	width: 750px;
+	margin: 20px auto;
+}
+
+#footer a {
+	text-decoration: none;
+	color: #999999;
+}
+
+#footer a:hover {
+	text-decoration: underline;
+	color: #777777;
+}
+
+div.setup {
+	width:700px;
+	margin-left:auto;
+	margin-right:auto;
+	text-align: left;
+}
+
+div.setup li {
+	padding-bottom:1em;
+}
+
+[class^="glyphicon-"],[class*=" glyphicon-"] {
+    display:inline-block;
+    width:14px;height:14px;
+    *margin-right:.3em;
+    line-height:14px;
+    vertical-align:text-top;
+    background-image:url("/postfixadmin/img/glyphicons.png");
+    background-repeat:no-repeat;
+}
+[class^="glyphicon-"]:last-child,[class*=" glyphicon-"]:last-child {
+    *margin-left:0;
+}
+.glyphicon-keys { background-position: -1496px 0; margin-top: 3px; }
+.icon-user {margin-top: 3px;}
