@@ -176,8 +176,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST")
 }
 
 include ("templates/header.php");
-include ("templates/menu.php");
 include ("templates/edit-mailbox.php");
+include ("templates/menu.php");
 include ("templates/footer.php");
 /* vim: set expandtab softtabstop=3 tabstop=3 shiftwidth=3: */
 ?>

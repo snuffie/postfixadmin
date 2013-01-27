@@ -1,23 +1,49 @@
 <?php if( !defined('POSTFIXADMIN') ) die( "This file cannot be used standalone." ); ?>
-<!-- <div id="footer">
-<a target="_blank" href="http://postfixadmin.sf.net/">Postfix Admin <?php print $version; ?></a>
-&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 <?php 
-if(isset($_SESSION['sessid']['username'])) {
-    printf($PALANG['pFooter_logged_as'], authentication_get_username());
+if (file_exists (realpath ("../".$CONF['setup_js']))) {
+    print "<script type=\"text/javascript\" src=\"../".htmlentities($CONF['setup_js'])."\"></script>\n";
+} else {
+    print "<script type=\"text/javascript\" src=\"".htmlentities($CONF['setup_js'])."\" /></script>\n";
 }
-?> 
-&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-<a target="_blank" href="http://postfixadmin.sf.net/update-check.php?version=<?php print $version; ?>"><?php print $PALANG['check_update']; ?></a>
-<?php
-if (($CONF['show_footer_text'] == "YES") and ($CONF['footer_link']))
-{
-   print "&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;";
-   print "<a href=\"" . $CONF['footer_link'] . "\">" . $CONF['footer_text'] . "</a>\n";
+if (file_exists (realpath ("../".$CONF['developr_input_js']))) {
+    print "<script type=\"text/javascript\" src=\"../".htmlentities($CONF['developr_input_js'])."\"></script>\n";
+} else {
+    print "<script type=\"text/javascript\" src=\"".htmlentities($CONF['developr_input_js'])."\" /></script>\n";
 }
-
+if (file_exists (realpath ("../".$CONF['developr_modal_js']))) {
+    print "<script type=\"text/javascript\" src=\"../".htmlentities($CONF['developr_modal_js'])."\"></script>\n";
+} else {
+    print "<script type=\"text/javascript\" src=\"".htmlentities($CONF['developr_modal_js'])."\"></script>\n";
+}
+if (file_exists (realpath ("../".$CONF['developr_navigable_js']))) {
+    print "<script type=\"text/javascript\" src=\"../".htmlentities($CONF['developr_navigable_js'])."\"></script>\n";
+} else {
+    print "<script type=\"text/javascript\" src=\"".htmlentities($CONF['developr_navigable_js'])."\"></script>\n";
+}
+if (file_exists (realpath ("../".$CONF['developr_scroll_js']))) {
+    print "<script type=\"text/javascript\" src=\"../".htmlentities($CONF['developr_scroll_js'])."\"></script>\n";
+} else {
+    print "<script type=\"text/javascript\" src=\"".htmlentities($CONF['developr_scroll_js'])."\"></script>\n";
+}
+if (file_exists (realpath ("../".$CONF['developr_agenda_js']))) {
+    print "<script type=\"text/javascript\" src=\"../".htmlentities($CONF['developr_agenda_js'])."\"></script>\n";
+} else {
+    print "<script type=\"text/javascript\" src=\"".htmlentities($CONF['developr_agenda_js'])."\"></script>\n";
+}
+if (file_exists (realpath ("../".$CONF['developr_table_js']))) {
+    print "<script type=\"text/javascript\" src=\"../".htmlentities($CONF['developr_table_js'])."\"></script>\n";
+} else {
+    print "<script type=\"text/javascript\" src=\"".htmlentities($CONF['developr_table_js'])."\"></script>\n";
+}
+if (file_exists (realpath ("../".$CONF['developr_tabs_js']))) {
+    print "<script type=\"text/javascript\" src=\"../".htmlentities($CONF['developr_tabs_js'])."\"></script>\n";
+} else {
+    print "<script type=\"text/javascript\" src=\"".htmlentities($CONF['developr_tabs_js'])."\"></script>\n";
+}
 ?>
-</div> -->
-<div id="footer"><img src="/postfixadmin/images/logo-default.png"></div>
+<script>
+$.template.init();
+</script>
+<!-- <div id="footer"><img class="profit_logo" src="/postfixadmin/images/logo-default.png"></div> -->
 </body>
 </html>

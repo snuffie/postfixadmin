@@ -91,8 +91,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST")
 if ($_SERVER['REQUEST_METHOD'] == "GET" || $error == 1)
 {
     include ("templates/header.php");
-    include ("templates/menu.php");
     include ("templates/broadcast-message.php");
+    include ("templates/menu.php");
     include ("templates/footer.php");
 }
 

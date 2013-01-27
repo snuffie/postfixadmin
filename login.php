@@ -34,11 +34,10 @@ if($CONF['configured'] !== true) {
   exit;
 }
 
+
 if ($_SERVER['REQUEST_METHOD'] == "GET")
 {
-    include ("./templates/header.php");
     include ("./templates/login.php");
-    include ("./templates/footer.php");
 }
 
 if ($_SERVER['REQUEST_METHOD'] == "POST")
@@ -91,11 +90,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST")
         header("Location: main.php");
         exit(0);
     }
-
-    include ("./templates/header.php");
     include ("./templates/login.php");
-    include ("./templates/footer.php");
+
 }
+
 
 /* vim: set expandtab softtabstop=4 tabstop=4 shiftwidth=4: */
 ?>

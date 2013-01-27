@@ -2,14 +2,15 @@
 <?php 
 if (sizeof ($list_admins) > 0)
 {
-   print "<table id=\"admin_table\" class=\"table table-striped table-condensed\">\n";
-   print "   <tr class=\"header\">\n";
+   print "<div id=\"admin_table\" class=\"dataTables_wrapper\">\n";
+   print "   <div class=\"dataTables_header\">\n";
    print "      <td>" . $PALANG['pAdminList_admin_username'] . "</td>\n";
    print "      <td>" . $PALANG['pAdminList_admin_count'] . "</td>\n";
    print "      <td>" . $PALANG['pAdminList_admin_modified'] . "</td>\n";
    print "      <td>" . $PALANG['pAdminList_admin_active'] . "</td>\n";
    print "      <td colspan=\"2\">&nbsp;</td>\n";
-   print "   </tr>\n";
+   print "   </div>\n";
+
 
    for ($i = 0; $i < sizeof ($list_admins); $i++)
    {
@@ -29,7 +30,7 @@ if (sizeof ($list_admins) > 0)
 		}
    }
 
-   print "</table>\n";
+   print "</div>\n";
    print "<p><a class=\"btn btn-primary\" href=\"create-admin.php\" style=\"margin-top: 20px;\">" . $PALANG['pAdminMenu_create_admin'] . "</a>\n";
 }
 

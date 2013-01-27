@@ -146,8 +146,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST")
 }
 
 include ("templates/header.php");
-include ("templates/menu.php");
 include ("templates/admin_create-domain.php");
+include ("templates/menu.php");
 include ("templates/footer.php");
 
 /* vim: set expandtab softtabstop=4 tabstop=4 shiftwidth=4: */

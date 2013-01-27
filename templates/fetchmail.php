@@ -12,13 +12,16 @@ foreach(array_keys($fm_struct) as $row){
 }
 
 if ($edit || $new) { # edit mode
+   echo '<div class="row-fluid>';
+   echo '<div class="span12';
+   echo '<div class="span6 offset3';
    echo '<div id="edit_form">';
    echo '<form name="fetchmail" method="post">';
    print fetchmail_edit_row($formvars);
 
 } else { # display mode
    print '<div id="overview">';
-   print '<form name="overview" style="width: 750px;" method="post">';
+   print '<form name="overview" method="post">';
    print "<table id=\"log_table\" class=\"table table-striped\" border=0>\n";
    print "   <tr>\n";
    print "      <td colspan=\"".(sizeof($headers)+2)."\"><h3>".$PALANG['pFetchmail_welcome'].$user_domains."</h3></td>\n";
@@ -55,7 +58,8 @@ if ($edit || $new) { # edit mode
    print "</form>\n";
    print "</div>\n";
 
-   print "<p><a href='?new=1'>".$PALANG['pFetchmail_new_entry']."</a></p>\n";
+
+   print "<p><a class='btn btn-primary' href='?new=1'>".$PALANG['pFetchmail_new_entry']."</a></p>\n";
 
 } # end display mode
 
@@ -63,8 +67,8 @@ function fetchmail_edit_row($data=array()){
    global $fm_struct,$fm_defaults,$PALANG;
    $id=$data["id"];
    $_id=$data["id"]*100+1;
-   $ret="<table>";
-   $ret .= '<tr><td colspan="3"><h3>' . $PALANG['pMenu_fetchmail'] . '</h3></td></tr>';
+   $ret="<table class='formbox'>";
+   $ret .= '<tr><td colspan="3"><legend>' . $PALANG['pMenu_fetchmail'] . '</legend></td></tr>';
    # TODO: $formvars possibly contains db-specific boolean values
    # TODO: no problems with MySQL, to be tested with PgSQL
    # TODO: undefined values may also occour
@@ -73,8 +77,8 @@ function fetchmail_edit_row($data=array()){
       $title = $PALANG['pFetchmail_field_' . $key];
       $comment = $PALANG['pFetchmail_desc_' . $key];
       if ($editible){
-         $ret.="<tr><td align=left valign=top><label for=${_id} style='width:20em;'>${title}:&nbsp;</label></td>";
-         $ret.="<td align=left style='padding-left:.25em;padding-right:.25em;background-color:white;'>";
+         $ret.="<tr><td align=right valign=top><label for=${_id} style='width:18em;'>${title}:&nbsp;</label></td>";
+         $ret.="<td align=left style='padding-left:.25em;padding-right:.25em;'>";
          $func="_edit_".$type;
          if (! function_exists($func))
             $func="_edit_text";
@@ -102,8 +106,9 @@ function fetchmail_edit_row($data=array()){
       }
    }
    $ret.="<tr><td align=center colspan=3>
-      <input type=submit name=save value='" . $PALANG['save'] . "'> &nbsp;
-      <input type=submit name=cancel value='" . $PALANG['cancel'] . "'>
+       
+      <input class='btn' type=submit style='margin: 20px 0 20px 0' name=cancel value='" . $PALANG['cancel'] . "'> &nbsp;
+      <input class='btn btn-info' style='margin: 20px 0 20px 0' type=submit name=save value='" . $PALANG['save'] . "'>
    ";
    if ($id){
       $ret.="<input type=hidden name=edit value='${id}'>";
@@ -113,6 +118,10 @@ function fetchmail_edit_row($data=array()){
    $ret.="<p />\n";
    $ret.="</form>\n";
    $ret.="</div>\n";
+   $ret.="</div>\n";
+   $ret.="</div>\n";
+   $ret.="</div>\n";
+
    return $ret;
 }
 
@@ -132,7 +141,7 @@ function _edit_num($id,$key,$def_vals,$val=""){
 }
 
 function _edit_bool($id,$key,$def_vals,$val=""){
-   $ret="<input type=checkbox name=${key} id=${id}";
+   $ret="<input style='margin-top: -4px;' type=checkbox name=${key} id=${id}";
    if ($val)
       $ret.=" checked";
    $ret.=">";

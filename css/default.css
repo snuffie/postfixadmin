@@ -1,6 +1,6 @@
 body {
 	background: url(/postfixadmin/images/linen.jpg) repeat #d1d5d8;
-	color: #333;
+	color: #4e4f4f;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 11px;
 	font-weight: normal;
@@ -14,6 +14,10 @@ h6 {
 a {
 	text-decoration: none;
 	color: #4f4f4f;
+}
+
+.profit_logo {
+	opacity: 0.4;
 }
 
 a:hover {
@@ -35,33 +39,6 @@ table {
 	font-size: 11px;
 }
 
-
-.flat {
-	border: 1px solid #888888;
-}
-
-ul.flash-info {
-	border:2px solid #AFE1A6; /* medium green */
-	padding:1em;
-	max-width:730px;
-	margin-left:auto;
-	margin-right:auto;
-	list-style:none;
-}
-
-ul.flash-error {
-	border:2px solid #FF6347; /* tomato */
-	padding:1em;
-	max-width:730px;
-	margin-left:auto;
-	margin-right:auto;
-	list-style:none;
-}
-
-.error_msg {
-	color: #d01313;
-}
-
 .standout {
 	color: maroon;
 	padding: 3px 3px 3px 3px;
@@ -69,14 +46,12 @@ ul.flash-error {
 }
 
 #login_header {
-	width: 750px;
 	padding: 20px 0 20px 0;
 	margin: 0 auto;
 	text-align: left;
 }
 
 #login {
-	width: 750px;
 	margin: 100px auto auto auto;
 	padding: 30px 0 10px 0;
 }
@@ -90,12 +65,12 @@ ul.flash-error {
 	border-radius: 5px;
 	border: 1px solid rgba(100, 100, 100, 0.2);
 	background-color: rgba(100, 100, 100, 0.1);
-	width: 300px; 
 	margin: 0 auto;
 	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
   -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
   border: 1px solid rgba(100, 100, 100, 0.245);
+  background:url(/postfixadmin/images/form_linen.png)  no-repeat;
 }
 
 .loginbox {
@@ -136,20 +111,31 @@ ul.flash-error {
 }
 
 #menu {
-	width: 750px;
-	margin: 10px auto 0 auto;
+	margin: 0 0 0 0;
 	font: 1.31em/1 Georgia, 'Times New Roman', Times, serif;
 	color: #444;
+	background: url(/postfixadmin/images/menu_linen.png) repeat-x;
+	background-color: rgba(100, 100, 100, 0.1); 
+	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+  	-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+  	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+  	padding:10px 0px 10px 0px;
+
+
 }
 
 #menu ul {
-	list-style: none;
+	list-style:none;
+	list-style-image:none;
+	display:block;
+	list-style-type:none;
+	float: left;
 }
+
 
 
 #menu li ul {
 	position: absolute;
-	width: auto;
 	left: -999em;
 }
 #menu li:hover ul, #menu li.sfhover ul {
@@ -190,7 +176,6 @@ ul.flash-error {
 
 #menu a {
 	display: block;
-	width: auto;
 	padding: 10px 5px 0px 5px;
 	color: #333;
 }
@@ -206,24 +191,18 @@ ul.flash-error {
 }
 
 
-
-
-
 .hlp_center {
 	text-align: center;
 }
 
 .help_text {
-	background: #efefef;
-	border-left: 1px solid #bbbbbb;
-	border-right: 1px solid #bbbbbb;
 	text-align: center;
 	padding-top: 5px;
 	padding-bottom: 5px;
+	color:#fff;
 }
 
 #main_menu {
-	width: 750px;
 	margin: 0 auto;
 }
 
@@ -236,26 +215,24 @@ ul.flash-error {
 
 
 legend {
-	border-bottom: 1px solid rgba(100, 100, 100, 0.15);;
+	color:#fff;
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	border:none;
 }
 
-
-#overview, #admin_domains, #admin_virtual {
-	width: 750px;
-	margin: 0 auto;
+label {
+	color:#FFF;
 }
+span {
+	color:#FFF;
+}
+
 
 
 #nav_bar {
 	text-align: right;
-	width: 750px;
-	margin: 0 auto;
 }
 
-#alias_domain_table, #alias_table, #mailbox_table, #overview_table, #log_table, #admin_table {
-	width: 750px;
-	margin: 0px auto;
-}
 
 table {
 	background: #f1f1f1;;
@@ -268,29 +245,6 @@ table .header {
 
 #footer {
 	padding-top: 20px;
-	width: 750px;
-	margin: 20px auto;
-}
-
-#footer a {
-	text-decoration: none;
-	color: #999999;
-}
-
-#footer a:hover {
-	text-decoration: underline;
-	color: #777777;
-}
-
-div.setup {
-	width:700px;
-	margin-left:auto;
-	margin-right:auto;
-	text-align: left;
-}
-
-div.setup li {
-	padding-bottom:1em;
 }
 
 [class^="glyphicon-"],[class*=" glyphicon-"] {

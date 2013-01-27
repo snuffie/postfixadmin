@@ -64,8 +64,8 @@ if ($_SERVER['REQUEST_METHOD'] == "GET")
     {
         $tMessage = "<div class=\"error_msg\">Cannot open file ($backup)</div>";
         include ("templates/header.php");
-        include ("templates/menu.php");
         include ("templates/message.php");
+        include ("templates/menu.php");
         include ("templates/footer.php");
     } 
     else

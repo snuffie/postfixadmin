@@ -1,7 +1,7 @@
 <?php if( !defined('POSTFIXADMIN') ) die( "This file cannot be used standalone." ); ?>
 
 <div id="edit_form">
-<form name="alias" class="formbox" style="width: 500px;" method="post">
+<form name="alias" class="formbox" method="post">
    <div class="control-group">
       <td colspan="3"><h3><?php print $PALANG['pEdit_alias_welcome']; ?></h3>
    </div>

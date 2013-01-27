@@ -78,8 +78,8 @@ if ($error != 1)
 }
 
 include ("templates/header.php");
-include ("templates/menu.php");
 include ("templates/viewlog.php");
+include ("templates/menu.php");
 include ("templates/footer.php");
 
 /* vim: set expandtab softtabstop=3 tabstop=3 shiftwidth=3: */

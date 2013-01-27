@@ -79,7 +79,7 @@ if ($tDisplay_next_show == 1)
 {
    print "<a href=\"$file?domain=$fDomain&limit=$tDisplay_next\"><img border=\"0\" src=\"images/arrow-r.png\" title=\"" . $PALANG['pOverview_right_arrow'] . "\" alt=\"" . $PALANG['pOverview_right_arrow'] . "\" /></a>\n";
 }
-print "</td></tr></table></div>\n";
+print "</td></tr></table>\n";
 
 
 if (boolconf('alias_domain')) {

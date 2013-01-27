@@ -1,7 +1,7 @@
 <?php if( !defined('POSTFIXADMIN') ) die( "This file cannot be used standalone." ); ?>
 <div id="overview">
 <form name="search" method="post" action="search.php">
-<table width=750><tr>
+<table><tr>
 <td>
    <h4><?php print $PALANG['pSearch_welcome'] . $fSearch; ?></h4>
 </td>

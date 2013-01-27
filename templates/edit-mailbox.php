@@ -1,6 +1,6 @@
 <?php if( !defined('POSTFIXADMIN') ) die( "This file cannot be used standalone." ); ?>
 <div id="edit_form">
-<form name="mailbox" class="formbox" style="width: 500px;" method="post">
+<form name="mailbox" class="formbox" method="post">
    <div class="control-group">
       <td colspan="3"><h3><?php print $PALANG['pEdit_mailbox_welcome']; ?></h3>
    </div>
@@ -9,16 +9,15 @@
       <h6><?php print $fUsername; ?></h6>
       <h6><?php print $pEdit_mailbox_username_text; ?></h6>
    </div>
+      <div class="control-group">
+      <input class="flat" placeholder="<?php print $PALANG['pEdit_mailbox_name']; ?>" type="text" name="fName" value="<?php print htmlspecialchars ($tName,ENT_QUOTES); ?>" />
+   </div>
    <div class="control-group">
       <input class="flat" placeholder="<?php print $PALANG['pEdit_mailbox_password']; ?>" type="password" name="fPassword" />
       <?php print $pEdit_mailbox_password_text; ?>
    </div>
    <div class="control-group">
       <input class="flat" placeholder="<?php print $PALANG['pEdit_mailbox_password2']; ?>" type="password" name="fPassword2" />
-   </div>
-   <div class="control-group">
-      <label><?php print $pEdit_mailbox_name_text; ?></label>
-      <input class="flat" placeholder="<?php print $PALANG['pEdit_mailbox_name']; ?>" type="text" name="fName" value="<?php print htmlspecialchars ($tName,ENT_QUOTES); ?>" />
    </div>
    <?php if ($CONF['quota'] == 'YES') { ?>
    <div class="control-group">

@@ -28,8 +28,8 @@ $SESSID_USERNAME = authentication_get_username();
 authentication_require_role('admin');
 
 include ("./templates/header.php");
-include ("./templates/menu.php");
 include ("./templates/main.php");
+include ("./templates/menu.php");
 include ("./templates/footer.php");
 
 /* vim: set expandtab softtabstop=4 tabstop=4 shiftwidth=4: */

@@ -36,8 +36,8 @@ $SESSID_USERNAME = authentication_get_username();
 if ($_SERVER['REQUEST_METHOD'] == "GET")
 {
     include ("./templates/header.php");
-    include ("./templates/menu.php");
     include ("./templates/password.php");
+    include ("./templates/menu.php");
     include ("./templates/footer.php");
 }
 
@@ -89,8 +89,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST")
     }
 
     include ("./templates/header.php");
-    include ("./templates/menu.php");
     include ("./templates/password.php");
+    include ("./templates/menu.php");
     include ("./templates/footer.php");
 }
 

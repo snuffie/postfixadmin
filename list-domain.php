@@ -106,13 +106,13 @@ while ($row = db_array ($result['result'])) {
 }
 
 include ("templates/header.php");
-include ("templates/menu.php");
 
 if ($is_superadmin) {
    include ("templates/admin_list-domain.php");
 } else {
    include ("templates/overview-get.php");
 }
+include ("templates/menu.php");
 include ("templates/footer.php");
 
 /* vim: set expandtab softtabstop=3 tabstop=3 shiftwidth=3: */

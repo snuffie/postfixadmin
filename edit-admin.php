@@ -151,8 +151,8 @@ if ($result['rows'] >= 1) {
 }
 
 include ("templates/header.php");
-include ("templates/menu.php");
 include ("templates/admin_edit-admin.php");
+include ("templates/menu.php");
 include ("templates/footer.php");
 
 /* vim: set expandtab softtabstop=4 tabstop=4 shiftwidth=4: */

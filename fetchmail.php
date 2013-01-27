@@ -258,8 +258,8 @@ function _inp_password($val){
 }
 
 include ("./templates/header.php");
-include ("./templates/menu.php");
 include ("./templates/fetchmail.php");
+include ("./templates/menu.php");
 include ("./templates/footer.php");
 
 /* vim: set expandtab softtabstop=3 tabstop=3 shiftwidth=3: */

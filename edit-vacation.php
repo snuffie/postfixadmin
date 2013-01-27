@@ -203,8 +203,8 @@ else {
 }
 
 include ("templates/header.php");
-include ("templates/menu.php");
 include ("templates/edit-vacation.php");
+include ("templates/menu.php");
 include ("templates/footer.php");
 /* vim: set expandtab softtabstop=3 tabstop=3 shiftwidth=3: */
 ?>

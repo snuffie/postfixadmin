@@ -125,8 +125,8 @@ if ($result['rows'] > 0)
 }
 
 include ("templates/header.php");
-include ("templates/menu.php");
 include ("templates/search.php");
+include ("templates/menu.php");
 include ("templates/footer.php");
 
 /* vim: set expandtab softtabstop=4 tabstop=4 shiftwidth=4: */

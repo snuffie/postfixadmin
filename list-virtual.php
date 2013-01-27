@@ -319,8 +319,8 @@ if (isset ($limit)) {
 // this is why we need a proper template layer.
 $fDomain = htmlentities($fDomain, ENT_QUOTES);
 include ("templates/header.php");
-include ("templates/menu.php");
 include ("templates/list-virtual.php");
+include ("templates/menu.php");
 include ("templates/footer.php");
 
 /* vim: set expandtab softtabstop=4 tabstop=4 shiftwidth=4: */
