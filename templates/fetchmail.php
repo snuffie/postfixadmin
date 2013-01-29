@@ -35,7 +35,7 @@ if ($edit || $new) { # edit mode
    
     if (sizeof ($tFmail) > 0){
        foreach($tFmail as $row){
-         print "   <tr class=\"hilightoff\" onMouseOver=\"className='hilighton';\" onMouseOut=\"className='hilightoff';\">\n";
+         print "   <tr class=\"hilightoff\";\">\n";
          foreach($row as $key=>$val){
 
             if (!isset($fm_struct[$key])) continue; # TODO: not really nice, but avoids undefined index warnings ;-)

@@ -126,7 +126,7 @@ if (file_exists (realpath ("../".$CONF['developr_notify_js']))) {
       <ul class="inputs black-input large">
          <li><span class="icon-user mid-margin-right"></span><input autocomplete="on" class="input-unstyled" id="login" placeholder="<?php print $PALANG['pLogin_username']; ?>" type="text" name="fUsername" value="" /></li>
          <li><span class="icon-lock mid-margin-right"></span><input autocomplete="on" class="input-unstyled" id="pass" placeholder="<?php print $PALANG['pLogin_password']; ?>" type="password" name="fPassword" value="" /></li>
-         <!-- <li><?php echo language_selector(); ?></li> -->
+         <li><?php echo language_selector(); ?></li>
       </ul>
             <button class="button blue-gradient full-width huge" type="submit" name="submit"><?php print $PALANG['pLogin_button']; ?></button>
                <?php print $tMessage; ?>

@@ -68,13 +68,13 @@ print _menulink("main.php", $PALANG['pMenu_main'], "", "shortcut-dashboard");
 if (authentication_has_role('global-admin'))
     print _menulink("list-admin.php", $PALANG['pAdminMenu_list_admin'], "", "shortcut-dashboard");
 
-print _menulink("list-domain.php", $PALANG['pAdminMenu_list_domain'], "", "shortcut-agenda");
-
 $link = 'list-virtual.php';
 if(isset($_SESSION['list_virtual_sticky_domain'])) {
     $link = 'list-virtual.php';
 }
 print _menulink($link, $PALANG['pAdminMenu_list_virtual'], $submenu_virtual, "shortcut-messages" );
+
+print _menulink("list-domain.php", $PALANG['pAdminMenu_list_domain'], "", "shortcut-agenda");
 
 if ($CONF['fetchmail'] == 'YES') {
     print _menulink("fetchmail.php", $PALANG['pMenu_fetchmail'], $submenu_fetchmail, "shortcut-messages" );

@@ -286,7 +286,7 @@ function writeMenuLink($menu="")
     if ($menu == '/postfixadmin/list-domain.php')
         return "Domäner";
     if ($menu == '/postfixadmin/list-virtual.php')
-        return "Epost och alias";
+        return "Översikt";
     if ($menu == '/postfixadmin/fetchmail.php')
         return "Hämtning av epost";
     if ($menu == '/postfixadmin/sendmail.php')
@@ -295,6 +295,18 @@ function writeMenuLink($menu="")
         return "Lösenord";
     if ($menu == '/postfixadmin/viewlog.php')
         return "Logg";
+    if ($menu == '/postfixadmin/create-domain.php')
+        return "Skapa domän";
+    if ($menu == '/postfixadmin/create-admin.php')
+        return "Skapa ny administratör";
+    if ($menu == '/postfixadmin/edit-admin.php')
+        return "Ändra administratör";
+    if ($menu == '/postfixadmin/edit-domain.php')
+        return "Ändra domän";
+    if ($menu == '/postfixadmin/create-mailbox.php')
+        return "Skapa brevlåda";
+    if ($menu == '/postfixadmin/search.php')
+        return "Sök";
 
 
 
@@ -306,6 +318,9 @@ function writeMenuLink($menu="")
 <button type="button" class="button black-gradient hide-on-desktop" id="back-button" onclick="history.go(-1)">
     <span class="icon-left" style="margin-left: -4px;"></span>
 </button>
+<div class="profit_brand">
+    <img class="profit_brand_image" src="images/watermark.png" />
+</div>
 <section role="main" id="main">
 <noscript class="message black-gradient simpler">Your browser does not support JavaScript! Some features won't work as expected...</noscript>
 <hgroup id="main-title" class="thin">

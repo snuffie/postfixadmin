@@ -1,33 +1,35 @@
 <?php if( !defined('POSTFIXADMIN') ) die( "This file cannot be used standalone." ); ?>
+<style>
+label, b {
+   font: 12px/1.7em 'Open Sans';
+   font-weight: bold;
+}
+</style> 
+<form name="create_admin" method="post">
+   <div class="columns">
+      <div class="eight-columns">
+         <fieldset class="fieldset fields-list">
+            <legend class="legend"><?php print $PALANG['pAdminCreate_admin_welcome']; ?></legend>
+            <div class="field-block button-height">
+               <label class="label"><b><?php print $pAdminCreate_admin_username_text; ?>:</b></label>
+               <input class="input" type="text" placeholder="Namn" name="fUsername" value="<?php print $tUsername; ?>" />
+            </div>
+            <div class="field-block button-height">
+               <label class="label"><b><?php print $PALANG['pAdminCreate_admin_password']; ?>:</b></label>
+               <input class="input" placeholder="<?php print $PALANG['pAdminCreate_admin_password']; ?>" type="password" name="fPassword" />
+               <?php print $pAdminCreate_admin_password_text; ?>
+            </div>
+            <div class="field-block button-height">
+               <label class="label"><b><?php print $PALANG['pAdminCreate_admin_password']; ?> igen:</b></label>
+               <input class="input" type="password" name="fPassword2" />
+               <?php print $pAdminCreate_admin_password_text; ?>
+               <div style="clear: both;"></div>
+            </div>
 
-<div class="row-fluid">
-   <div class="span12">
-      <div id="edit_form">
-         <div class="span6 offset3"> 
-            <form name="create_admin" method="post" class="formbox" class="form-horizontal">
-               <div class="control-group">
-                  <legend><?php print $PALANG['pAdminCreate_admin_welcome']; ?></legend>
-                  <div class="controls">
-                     <input class="flat" type="text" placeholder="<?php print $pAdminCreate_admin_username_text; ?>" name="fUsername" value="<?php print $tUsername; ?>" />
-                  </div>
-               </div>
-               <div class="control-group">
-                  <div class="controls">
-                     <input class="flat" placeholder="<?php print $PALANG['pAdminCreate_admin_password']; ?>" type="password" name="fPassword" />
-                     <?php print $pAdminCreate_admin_password_text; ?>
-                  </div>
-               </div>
-               <div class="control-group">
-                  <div class="controls">
-                     <input class="flat" type="password" placeholder="<?php print $PALANG['pAdminCreate_admin_password2'];?>" name="fPassword2" />
-                  </div>
-               </div>
-               <div class="control-group">
-                  <label class="control-label">
-                  <?php print $PALANG['pAdminCreate_admin_address'] . ":"; ?>
-                  </label>
-                  <div class="controls">
-                     <select name="fDomains[]" size="10" multiple="multiple">
+            <div class="field-block button-height">
+               <label class="label"><b>Välj <?php print $PALANG['pAdminCreate_admin_address']; ?>:</b><div style="clear: both;"></div>
+                  <small style="color: #333;">(Håll <b>Ctrl</b> eller <b>Cmd</b> <div style="clear: both;"></div>för att markera flera)</small></label>
+                     <select class="select multiple silver-gradient" style="width: 192px;" name="fDomains[]" size="8" multiple>
                      <?php
                      for ($i = 0; $i < sizeof ($list_domains); $i++)
                      {  
@@ -41,20 +43,16 @@
                         }
                      }
                      ?>
-                     </select>
-                  </div>
-               </div>
-               <div class="control-group">
-                  <?php
-                     echo "<a class='btn' href='list-admin.php" . htmlentities($_SESSION['list_admin_sticky_domain'], ENT_QUOTES) . "'>" . "Avbryt" . "</a>";
+                     <select>
+            </div>
+            <div class="field-drop button-height" style="height: 30px;">
+                     <?php
+                     echo "<a class='button big' href='list-admin.php" . htmlentities($_SESSION['list_admin_sticky_domain'], ENT_QUOTES) . "'>" . "Avbryt" . "</a>";
                   ?>
-                  <td colspan="3" class="hlp_center"><input class="btn btn-info" type="submit" name="submit" value="<?php print $PALANG['pAdminCreate_admin_button']; ?>" />
-               </div>
-               <div class="control-group">
-                  <td colspan="3" class="standout"><?php print $tMessage; ?>
-               </div>
-            </form>
-         </div>
+                  <input class="button blue-gradient glossy big" type="submit" name="submit" value="<?php print $PALANG['pAdminCreate_admin_button']; ?>" /><div style="clear:both;"></div>
+                  <?php print $tMessage; ?>
+            </div>
+         </fieldset>
       </div>
-   </div>
-</div>
+   </div> 
+</form>

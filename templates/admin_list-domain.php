@@ -1,37 +1,33 @@
 <?php if( !defined('POSTFIXADMIN') ) die( "This file cannot be used standalone." ); ?>
 <div id="sorting-advanced_wrapper" class="dataTables_wrapper" role="grid">
 <div class="table-header button-height">
-<form name="search" method="post" action="search.php">
-
-   <div class="float-right">
-      <span class="input" style="padding-left: 0;">
-       <input type="text" class="input" style="max-width: 120px;" placeholder="<?= $PALANG['pSearch'] ?>" name="large-label-2" id="table-search" value="">
-       <button type="submit" style="line-height: 24px" class="button compact"><span class="icon-search icon-size2"></span></button>
-   </span>
-   </div>
-</form>
-   <form name="overview" method="post">
-
-   <select name="fUsername" class="select">
-   <?php
-   if (!empty ($list_admins))
-   {
-      for ($i = 0; $i < sizeof ($list_admins); $i++)
-      {
-         if ($fUsername == $list_admins[$i])
+   <form name="search" method="post" action="search.php">
+      <div class="float-right">
+         <span class="input" style="padding-left: 0;">
+            <input type="text" class="input" style="max-width: 120px;" placeholder="<?= $PALANG['pSearch'] ?>" name="search" id="table-search" value="">
+            <button type="submit" style="line-height: 24px" class="button compact"><span class="icon-search"></span></button>
+         </span>
+      </div>
+   </form>
+   <form name="overview" id="userform" method="post">
+      <select id="userlist" name="fUsername" class="select">
+         <?php
+         if (!empty ($list_admins))
          {
-            print "<option value=\"" . $list_admins[$i] . "\" selected>" . $list_admins[$i] . "</option>\n";
+            for ($i = 0; $i < sizeof ($list_admins); $i++)
+            {
+               if ($fUsername == $list_admins[$i])
+               {
+                  print "<option value=\"" . $list_admins[$i] . "\" selected>" . $list_admins[$i] . "</option>\n";
+               }
+               else
+               {
+                  print "<option value=\"" . $list_admins[$i] . "\">" . $list_admins[$i] . "</option>\n";
+               }
+            }
          }
-         else
-         {
-            print "<option value=\"" . $list_admins[$i] . "\">" . $list_admins[$i] . "</option>\n";
-         }
-      }
-   }
-   ?>
-   </select>
-   <input class="button glossy blue-gradient" type="submit" name="go" value="<?php print $PALANG['pOverview_button']; ?>" />
-   <!-- <input class="button" type="submit" name="go" value="<?php print $PALANG['pOverview_button']; ?>" /> -->
+         ?>
+      </select>
    </form>
 </div>
 
@@ -102,3 +98,9 @@ if (sizeof ($domain_properties) > 0)
    print "</div>\n";
 }
 ?>
+<script type="text/javascript">
+   $('#userlist').on('change', function()
+{
+    $('#userform').submit();
+});
+</script>

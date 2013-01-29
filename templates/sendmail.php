@@ -1,58 +1,36 @@
 <?php if( !defined('POSTFIXADMIN') ) die( "This file cannot be used standalone." ); ?>
-      <div class="columns">
-         <div class="six-columns">
-               <h3 class="thin underline">Skicka mail</h3>
-               <fieldset class="fieldset fields-list">
-                  <legend class="legend"><?php print $PALANG['pSendmail_welcome']; ?></legend>
-                  <div class="field-block button-height">
-                     <label for="validation-email" class="label"><b><?php print $PALANG['pSendmail_admin'] . ":"; ?>
-                  <?php print $SESSID_USERNAME; ?></b></label>
-                     <input type="text" name="validation-email" id="validation-email" class="input validate[required,custom[email]]" placeholder="<?php print $PALANG['pSendmail_to']; ?>">
-                  </div>
-                   <div class="field-block button-height">
-                     <label for="file" class="label"><b>Titel</b></label>
-                     <input type="text" class="input" value="" placeholder="<?php print $PALANG['pSendmail_subject']; ?>" type="text" name="fSubject" value="<?php print $PALANG['pSendmail_subject_text']; ?>">
-                  </div>
-                  <div class="field-block button-height">
-                     <label for="file" class="label"><b>Meddelande</b></label>
-                     <textarea name="autoexpanding" id="autoexpanding" class="input full-width autoexpanding" style="overflow: hidden; resize: none; height: 140px;"><?php print $CONF['welcome_text']; ?></textarea>
-                  </div>
-                  <div class="field-drop button-height">
-                     <input class="button blue-gradient glossy" type="submit" name="submit" value="<?php print $PALANG['pSendmail_button']; ?>" />
-                  </div>
-               </fieldset>
-         </div>
-      </div> 
-         <div id="edit_form">
-            <form name="mailbox" class="formbox" method="post">
-               <div class="control-group">
-                  <legend></legend>
+<style>
+label {
+   font: 14px/1.7em 'Open Sans';
+   font-weight: bold;
+}
+</style>
+<form name="mailbox" method="post">
+   <div class="columns">
+         <div class="eight-columns">
+            <fieldset class="fieldset fields-list">
+               <legend class="legend"><?php print $PALANG['pSendmail_welcome']; ?></legend>
+               <div class="field-block button-height">
+                  <label class="label"><b><?php print $PALANG['pSendmail_admin'] . ":"; ?></b></label>
+                  <input type="text" class="input disabled" disabled="true" value="<?php print $SESSID_USERNAME; ?>">
                </div>
-               <div class="control-group">
-                  <label></label>
+               <div class="field-block button-height">
+                  <label for="validation-email" class="label"><b><?php print $PALANG['pSendmail_to']; ?>:</b></label>
+                  <input type="text" name="fTo" id="validation-email" class="input validate[required,custom[email]]" placeholder="Epost address">
                </div>
-               <div class="control-group">
-                  <div class="controls">
-                     <input class="flat" placeholder="<?php print $PALANG['pSendmail_to']; ?>" type="text" name="fTo" />
-                  </div>
+                <div class="field-block button-height">
+                  <label for="file" class="label"><b>Ämne:</b></label>
+                  <input type="text" class="input" value="" placeholder="<?php print $PALANG['pSendmail_subject']; ?>" type="text" name="fSubject" value="<?php print $PALANG['pSendmail_subject_text']; ?>:">
                </div>
-               <div class="control-group">
-                  <div class="contronls">
-                     <input class="flat" placeholder="<?php print $PALANG['pSendmail_subject']; ?>" type="text" name="fSubject" value="<?php print $PALANG['pSendmail_subject_text']; ?>" />
-                  </div>
+               <div class="field-block button-height">
+                  <label for="file" class="label"><b>Meddelande:</b></label>
+                  <textarea name="fBody" id="autoexpanding" class="input full-width autoexpanding" placeholder="<?php print $PALANG['pSendmail_body']; ?>" style="overflow: hidden; resize: none; height: 140px;"><?php print $CONF['welcome_text']; ?></textarea>
                </div>
-               <div class="control-group">
-                  <div class="controls">
-                     <textarea class="flat" placeholder="<?php print $PALANG['pSendmail_body']; ?>" rows="10" cols="60" name="fBody"><?php print $CONF['welcome_text']; ?></textarea>
-                  </div>
-               </div>
-               <div class="control-group">
-                  <div class="controls">
-                     <input class="btn btn-info" type="submit" name="submit" value="<?php print $PALANG['pSendmail_button']; ?>" />
-                  </div>
-               </div>
-               <div class="control-group">
+               <div class="field-drop button-height" style="height: 30px;">
+                  <input class="button blue-gradient glossy huge full-width" style="margin-top: -15px;" type="submit" name="submit" value="<?php print $PALANG['pSendmail_button']; ?>" /><div style="clear:both;"></div>
                   <?php print $tMessage; ?>
                </div>
-            </form>
+            </fieldset>
          </div>
+   </div> 
+</form>

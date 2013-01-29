@@ -1,39 +1,45 @@
 <?php if( !defined('POSTFIXADMIN') ) die( "This file cannot be used standalone." ); ?>
-<div id="overview">
-<form name="overview" method="get">
-<select class="flat" name="domain" onChange="this.form.submit();">
-<?php
-for ($i = 0; $i < sizeof ($list_domains); $i++)
-{
-   if ($fDomain == $list_domains[$i])
-   {
-      print "<option value=\"$list_domains[$i]\" selected>$list_domains[$i]</option>\n";
-   }
-   else
-   {
-      print "<option value=\"$list_domains[$i]\">$list_domains[$i]</option>\n";
-   }
-}
-?>
-</select>
-<!-- <input class="button" type="submit" name="go" value="<?php print $PALANG['pOverview_button']; ?>" /> -->
-</form>
-<form name="search" method="post" action="search.php">
-   <input type="textbox" name="search" size="10">
-</form>
+<div id="sorting-advanced_wrapper" class="dataTables_wrapper" role="grid">
+<div class="table-header button-height">
+   <form name="search" method="post" action="search.php">
+      <div class="float-right">
+         <span class="input" style="padding-left: 0;">
+            <input type="text" class="input" style="max-width: 120px;" placeholder="<?= $PALANG['pSearch'] ?>" name="search" id="table-search" value="">
+            <button type="submit" style="line-height: 24px" class="button compact"><span class="icon-search"></span></button>
+         </span>
+      </div>
+   </form>
+<!--    <form name="overview" method="post" class="margin-bottom">
+      <select class="select" name="domain">
+         <?php
+         for ($i = 0; $i < sizeof ($list_domains); $i++)
+         {
+            if ($fDomain == $list_domains[$i])
+            {
+               print "<option value=\"$list_domains[$i]\" selected>$list_domains[$i]</option>\n";
+            }
+            else
+            {
+               print "<option value=\"$list_domains[$i]\">$list_domains[$i]</option>\n";
+            }
+         }
+         ?>
+      </select>
+      <input class="button glossy blue-gradient" type="submit" name="go" value="<?php print $PALANG['pOverview_button']; ?>" />
+   </form> -->
+   <?php print "<h3 style='margin: 4px;'>".$PALANG['pOverview_title']."</h3>" ?>
 </div>
 
 <?php
-   print "<table id=\"overview_table\" class=\"table table-striped\">\n";
-   print "   <tr>\n";
-   print "      <td colspan=\"5\"><h3>".$PALANG['pOverview_title']."</h3></td>";
-   print "   </tr>";
-   print "   <tr class=\"header\">\n";
-   print "      <td>" . $PALANG['pOverview_get_domain'] . "</td>\n";
-   print "      <td>" . $PALANG['pOverview_get_aliases'] . "</td>\n";
-   print "      <td>" . $PALANG['pOverview_get_mailboxes'] . "</td>\n";
-   if ($CONF['quota'] == 'YES') print "      <td>" . $PALANG['pOverview_get_quota'] . "</td>\n";
+   print "<table id=\"overview_table\" class=\"table responsive-table dataTable\">\n";
+   print "   <thead>\n";
+   print "   <tr role='row' style='font-size: 90%;'>\n";
+   print "      <th>" . $PALANG['pOverview_get_domain'] . "</th>\n";
+   print "      <th>" . $PALANG['pOverview_get_aliases'] . "</th>\n";
+   print "      <th>" . $PALANG['pOverview_get_mailboxes'] . "</th>\n";
+   if ($CONF['quota'] == 'YES') print "      <th class='hide-on-mobile-portrait'>" . $PALANG['pOverview_get_quota'] . "</th>\n";
    print "   </tr>\n";
+   print "   </thead>\n";
 
    for ($i = 0; $i < sizeof ($list_domains); $i++)
    {

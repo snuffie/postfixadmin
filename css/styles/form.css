@@ -675,18 +675,6 @@ input:-moz-placeholder {
 	.field-drop .label strong {
 		color: white;
 	}
-	.field-drop:after {
-		display: block;
-		content: ' ';
-		width: 0;
-		height: 0;
-		border: 6px solid transparent;
-		border-top-color: white;
-		position: absolute;
-		z-index: 2;
-		top: 0;
-		left: 100px;
-	}
 
 /* Selects */
 .select {
@@ -1578,8 +1566,8 @@ input:-moz-placeholder {
 		.field-drop .label {
 			float: left;
 			text-align: right;
-			margin: 0 0 0 -210px;
-			width: 150px;
+			margin: 0 0 0 -260px;
+			width: 225px;
 		}
 
 	/* Field drop */
@@ -1588,9 +1576,6 @@ input:-moz-placeholder {
 	}
 	.field-drop .label {
 		width: 190px;
-	}
-	.field-drop:after {
-		left: 236px;
 	}
 
 	/* Sizes */
